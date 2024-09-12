@@ -36,7 +36,7 @@ export const layoutProps: HomeLayoutProps = {
     },
     {
       type: "icon",
-      url: "https://github.com/yeecord",
+      url: "https://github.com/OpenDeepLearningAI/OpenDeepLearning",
       text: "GitHub",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -47,7 +47,7 @@ export const layoutProps: HomeLayoutProps = {
     },
     {
       type: "icon",
-      url: "https://discord.gg/yeecord",
+      url: "https://discord.com/invite/bxnwugmNZg",
       text: "Discord",
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">

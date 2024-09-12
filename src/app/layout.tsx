@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body className="flex min-h-screen flex-col">
-        <I18nProvider
+        {/* <I18nProvider
           locale="cn"
           translations={{
             toc: "目錄",
@@ -49,9 +49,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             nextPage: "下一頁",
             chooseTheme: "選擇外觀主題",
             tocNoHeadings: "沒有子標題",
-            editOnGithub: "在 Github 上編輯此頁面",
+            editOnGithub: "Edit on Github",
           }}
-        >
+        > */}
           <RootProvider
             search={{
               options: { api: "https://search.yeecord.com/search" },
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           >
             {children}
           </RootProvider>
-        </I18nProvider>
+        {/* </I18nProvider> */}
       </body>
     </html>
   );
