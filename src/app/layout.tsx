@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { urlBase } from "@config";
 import type { Metadata } from "next";
-// import { I18nProvider } from "fumadocs-ui/i18n";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
@@ -38,28 +37,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <body className="flex min-h-screen flex-col">
-        {/* <I18nProvider
-          locale="cn"
-          translations={{
-            toc: "目錄",
-            search: "搜尋文檔",
-            lastUpdate: "最後更新於",
-            searchNoResult: "沒有結果",
-            previousPage: "上一頁",
-            nextPage: "下一頁",
-            chooseTheme: "選擇外觀主題",
-            tocNoHeadings: "沒有子標題",
-            editOnGithub: "Edit on Github",
+        <RootProvider
+          search={{
+            options: { api: "https://search.yeecord.com/search" },
           }}
-        > */}
-          <RootProvider
-            search={{
-              options: { api: "https://search.yeecord.com/search" },
-            }}
-          >
-            {children}
-          </RootProvider>
-        {/* </I18nProvider> */}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
