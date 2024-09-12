@@ -3,19 +3,21 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Yeecord Blog",
-    default: "Yeecord Blog",
-    absolute: "Yeecord Blog",
+    template: "%s - ODL Blog",
+    default: "ODL Blog",
+    absolute: "ODL Blog",
   },
-  description: "YEE式機器龍各種用肝和 ❤️ 製作的部落格",
+  description:
+    "Courses, code, news, research, and community for building AI-powered products.",
   openGraph: {
     images: "/opengraph-image.png",
     title: {
-      template: "%s - Yeecord Blog",
-      absolute: "Yeecord Blog",
-      default: "Yeecord Blog",
+      template: "%s - ODL Blog",
+      absolute: "ODL Blog",
+      default: "ODL Blog",
     },
-    description: "YEE式機器龍各種用肝和 ❤️ 製作的部落格",
+    description:
+      "Courses, code, news, research, and community for building AI-powered products.",
   },
 };
 

@@ -9,22 +9,22 @@ import { RootProvider } from "fumadocs-ui/provider";
 
 export const metadata: Metadata = {
   title: {
-    template: "OpenDeepLearning - %s",
-    default: "OpenDeepLearning - OpenDeepLearning",
+    default: "OpenDeepLearning",
+    template: "%s | OpenDeepLearning",
   },
   description:
-    "YEE式機器龍的指令及使用教學，透過簡單的一鍵式指令以及中文介面的音樂功能快速建立好和朋友玩耍的優質空間",
+    "Courses, code, news, research, and community for building AI-powered products.",
   twitter: {
     card: "summary_large_image",
   },
   openGraph: {
     images: "/opengraph-image.png",
     title: {
-      template: "OpenDeepLearning - %s",
-      default: "Yeecord - 萬中選一的 Discord 機器人",
+      default: "OpenDeepLearning",
+      template: "%s | OpenDeepLearning",
     },
     description:
-      "YEE式機器龍的指令及使用教學，透過簡單的一鍵式指令以及中文介面的音樂功能快速建立好和朋友玩耍的優質空間",
+      "Courses, code, news, research, and community for building AI-powered products.",
   },
   metadataBase: urlBase,
 };
