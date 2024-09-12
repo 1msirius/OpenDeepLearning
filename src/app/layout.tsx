@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { urlBase } from "@config";
 import type { Metadata } from "next";
-import { I18nProvider } from "fumadocs-ui/i18n";
+// import { I18nProvider } from "fumadocs-ui/i18n";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
