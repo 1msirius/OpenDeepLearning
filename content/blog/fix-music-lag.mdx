@@ -29,8 +29,6 @@ date: 2023/1/18
 
 而在這篇文章，我們將會詳細的一步步分析以及解決音樂機器人卡頓的問題。
 
-<Adsense />
-
 ## 我要如何排解這些問題？
 
 ### 1. 檢查網路連線
@@ -49,8 +47,6 @@ Discord 依賴著相當大量的伺服器作業，而經過了去年疫情那波
 
 ![Discord Status](/blog/fix-music-lag/discord-status.png)
 
-<Adsense />
-
 在這個頁面上會標示到目前是否有重大的服務離線，或是目前 API 有沒有被影響到，並且確認是否已經被修復。
 
 ### 3. 使用用戶端 App
@@ -67,8 +63,6 @@ Discord 用戶端是經過優化的 App，使用該 App 能夠大幅改善流暢
 ![Discord 語音頻道](/blog/fix-music-lag/edit-channel-settings.png)
 
 3. 在下方 `地區覆寫` 嘗試選擇不同的區域
-
-<Adsense />
 
 ![Discord 語音地區編輯](/blog/fix-music-lag/edit-voice-region.png)
 
@@ -87,8 +81,6 @@ Discord 用戶端是經過優化的 App，使用該 App 能夠大幅改善流暢
 可以嘗試檢查一下自己的電腦 CPU 以及記憶體使用量，如果兩者的用量達到頂峰的時候也會造成音樂上的卡頓，
 
 在 NodeJS 上要查詢 CPU 使用量可以使用原生的 [`os-utils`](https://www.npmjs.com/package/os-utils) 模組來達成：
-
-<Adsense />
 
 ```js
 const os = require("os-utils");
@@ -129,5 +121,3 @@ console.log(memoryUsage);
 }
 */
 ```
-
-<Adsense />
