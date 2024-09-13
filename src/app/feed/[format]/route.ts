@@ -11,7 +11,7 @@ export function generateStaticParams() {
   ];
 }
 
-export async function GET(
+export function GET(
   _: Request,
   { params }: { params: { format: string } },
 ) {
