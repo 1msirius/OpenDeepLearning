@@ -6,7 +6,7 @@ export const urlBase = new URL(
     : "http://localhost:3000",
 );
 
-export const domain = "https://yeecord.com";
+export const domain = "https://open-deeplearning.vercel.app";
 
 export const footer: FooterCategory[] = [
   {
