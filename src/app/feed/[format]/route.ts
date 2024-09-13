@@ -39,7 +39,7 @@ export async function GET(
     },
   });
 
-  const allPosts = blog.getPages();
+  const allPosts =  await blog.getPages();
   allPosts.forEach((post) => {
     const postUrl = `${domain}${post.url}`;
     feed.addItem({
