@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                   </div>
                 ),
                 description: "Maths for ML",
-                url: "#",
+                url: "/docs",
               },
             ]}
           />
