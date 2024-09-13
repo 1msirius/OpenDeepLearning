@@ -17,7 +17,7 @@ export default async function Page({
   const Content = page.data.exports.default;
   const lastEdit = await getGithubLastEdit({
     path: `content/docs/${page.file.path}`,
-    owner: "Sirius",
+    owner: "yeecord",
     repo: "website",
     token: process.env.GITHUB_TOKEN,
   });
