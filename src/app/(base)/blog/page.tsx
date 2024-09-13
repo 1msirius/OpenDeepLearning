@@ -62,7 +62,7 @@ export default function BlogIndex() {
         <div>
           <h2 className="mb-1 font-semibold">Follow our new posts</h2>
           <p className="text-sm text-muted-foreground">
-            Subscribe to our blog now
+            Subscribe to our blog
           </p>
         </div>
         <a

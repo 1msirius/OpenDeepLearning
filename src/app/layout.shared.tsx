@@ -19,20 +19,26 @@ export const layoutProps: HomeLayoutProps = {
     {
       url: "/docs",
       icon: <BookIcon />,
-      text: "使用教學",
-      active: "nested-url",
-    },
-    {
-      url: "/blog",
-      icon: <LayoutListIcon />,
-      text: "部落格",
+      text: "Cources",
       active: "nested-url",
     },
     {
       url: "https://app.yeecord.com",
       icon: <ExternalLinkIcon />,
-      text: "網頁面板",
+      text: "Resources",
       external: true,
+    },
+    {
+      url: "/blog",
+      icon: <LayoutListIcon />,
+      text: "Blog",
+      active: "nested-url",
+    },
+    {
+      url: "/blog",
+      icon: <LayoutListIcon />,
+      text: "Company",
+      active: "nested-url",
     },
     {
       type: "icon",
