@@ -1,4 +1,6 @@
 import createMDX from "fumadocs-mdx/config";
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 
 const withMDX = createMDX({
   rootMapPath: "./src/_map.ts",
@@ -7,6 +9,10 @@ const withMDX = createMDX({
     filter: (path) => {
       return path.startsWith("docs");
     },
+  },
+  mdxOptions: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: (v) => [rehypeKatex, ...v],
   },
 });
 

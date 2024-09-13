@@ -3,9 +3,10 @@ import { urlBase } from "@config";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-
+import "katex/dist/katex.css";
 import "./global.css";
 import { RootProvider } from "fumadocs-ui/provider";
+import { Banner } from "fumadocs-ui/components/banner";
 
 export const metadata: Metadata = {
   title: {
@@ -39,9 +40,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="flex min-h-screen flex-col">
         <RootProvider
           search={{
-            options: { api: "https://search.yeecord.com/search" },
+            options: { api: "#" },
           }}
         >
+          <Banner id="hello-world">Give us star on GitHub</Banner>
           {children}
         </RootProvider>
       </body>

@@ -9,16 +9,16 @@ export const layoutProps: HomeLayoutProps = {
         <div className="dark:hidden">
           <Image
             src="/logo-light.png"
-            width="24"
-            height="24"
+            width="22"
+            height="22"
             alt="OpenDeepLearning"
           />
         </div>
         <div className="hidden dark:flex">
           <Image
             src="/logo-dark.png"
-            width="24"
-            height="24"
+            width="22"
+            height="22"
             alt="OpenDeepLearning"
           />
         </div>
