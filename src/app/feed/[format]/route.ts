@@ -11,10 +11,7 @@ export function generateStaticParams() {
   ];
 }
 
-export function GET(
-  _: Request,
-  { params }: { params: { format: string } },
-) {
+export function GET(_: Request, { params }: { params: { format: string } }) {
   const { format } = params;
   const validFormats = ["rss.xml", "atom.xml", "feed.json"];
   if (!validFormats.includes(format)) {
