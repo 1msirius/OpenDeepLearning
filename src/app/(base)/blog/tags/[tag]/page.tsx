@@ -18,13 +18,13 @@ export default function TagPage({ params }: { params: { tag: string } }) {
   return (
     <main className="my-16 flex w-full flex-1 flex-col gap-5">
       <div className="mb-5 flex flex-col items-center gap-5 text-center">
-        <h1 className="mb-4 text-3xl font-bold">{`帶有「${decodedTag}」標籤的文章`}</h1>
+        <h1 className="mb-4 text-3xl font-bold">{`Articles tagged "${decodedTag}"`}</h1>
 
         <Link
           href="/blog/tags"
           className={cn(buttonVariants({ color: "primary" }))}
         >
-          所有標籤
+          All Tags
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -56,13 +56,13 @@ export function generateMetadata({
   const decodedTag = decodeURIComponent(params.tag);
 
   return {
-    title: `帶有「${decodedTag}」標籤的文章`,
+    title: `Articles with the "${decodedTag}" tag`,
     alternates: {
       canonical: `${domain}/blog/tags/${params.tag}`,
     },
     openGraph: {
       images: "/opengraph-image.png",
-      title: `帶有「${decodedTag}」標籤的文章`,
+      title: `Articles with the "${decodedTag}" tag`,
     },
   };
 }

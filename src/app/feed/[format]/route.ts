@@ -46,6 +46,7 @@ export function GET(_: Request, { params }: { params: { format: string } }) {
       author: post.data.authors.map((author) => ({
         name: author,
         email: "hi@opendeeplearning.xyz",
+        link: "github.com"
       })),
       category: post.data.tags
         ? post.data.tags.map((tag) => ({ name: tag, term: tag }))
