@@ -12,6 +12,7 @@
   "packageManager": "pnpm@9.2.0",
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
+    "algoliasearch": "^5.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "feed": "^4.2.2",

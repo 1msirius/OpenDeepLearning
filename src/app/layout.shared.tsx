@@ -39,7 +39,7 @@ export const layoutProps: HomeLayoutProps = {
       url: "/resources",
       icon: <ExternalLinkIcon />,
       text: "Resources",
-      external: true,
+      active: "nested-url",
     },
     {
       url: "/blog",

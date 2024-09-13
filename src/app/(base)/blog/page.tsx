@@ -66,7 +66,7 @@ export default function BlogIndex() {
           </p>
         </div>
         <a
-          href="/rss.xml"
+          href="/rss"
           className={cn(
             buttonVariants({ color: "primary", className: "ml-auto" }),
           )}
@@ -74,13 +74,13 @@ export default function BlogIndex() {
           RSS
         </a>
         <a
-          href="/atom.xml"
+          href="/atom"
           className={cn(buttonVariants({ color: "primary" }))}
         >
           Atom
         </a>
         <a
-          href="/feed.json"
+          href="/json"
           className={cn(buttonVariants({ color: "primary" }))}
         >
           JSON
