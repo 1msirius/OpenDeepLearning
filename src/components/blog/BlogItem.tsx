@@ -21,7 +21,7 @@ export function BlogItem({ page }: { page: InferPageType<typeof blog> }) {
             sizes="(max-width: 760px) 90vw, 400px"
           />
         ) : (
-          <div className="flex h-full flex-1 flex-col bg-green-400">
+          <div className="flex h-full flex-1 flex-col bg-red-600">
             <Image
               alt="logo"
               src="/img/logo-transparent.png"
