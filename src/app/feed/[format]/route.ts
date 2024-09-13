@@ -3,7 +3,7 @@ import { domain } from "@config";
 import { NextResponse } from "next/server";
 import { blog } from "@/app/source";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return [
     { format: "rss.xml" },
     { format: "atom.xml" },
@@ -17,14 +17,12 @@ export async function GET(
 ) {
   const { format } = params;
   const validFormats = ["rss.xml", "atom.xml", "feed.json"];
-
   if (!validFormats.includes(format)) {
     return NextResponse.json(
       { error: "Unsupported feed format" },
       { status: 404 },
     );
   }
-
   const feed = new Feed({
     title: "OpenDeepLearning",
     description: "Welcome to OpenDeepLearning Blog.",
@@ -39,7 +37,7 @@ export async function GET(
     },
   });
 
-  const allPosts =  await blog.getPages();
+  const allPosts = blog.getPages();
   allPosts.forEach((post) => {
     const postUrl = `${domain}${post.url}`;
     feed.addItem({
