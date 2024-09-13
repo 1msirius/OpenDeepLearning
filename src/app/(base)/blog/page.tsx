@@ -61,9 +61,7 @@ export default function BlogIndex() {
       <div className="mt-8 flex flex-row items-end gap-2 rounded-xl border bg-card p-4 shadow-lg">
         <div>
           <h2 className="mb-1 font-semibold">Follow our new posts</h2>
-          <p className="text-sm text-muted-foreground">
-            Subscribe to our blog
-          </p>
+          <p className="text-sm text-muted-foreground">Subscribe to our blog</p>
         </div>
         <a
           href="/rss"
@@ -73,16 +71,10 @@ export default function BlogIndex() {
         >
           RSS
         </a>
-        <a
-          href="/atom"
-          className={cn(buttonVariants({ color: "primary" }))}
-        >
+        <a href="/atom" className={cn(buttonVariants({ color: "primary" }))}>
           Atom
         </a>
-        <a
-          href="/json"
-          className={cn(buttonVariants({ color: "primary" }))}
-        >
+        <a href="/json" className={cn(buttonVariants({ color: "primary" }))}>
           JSON
         </a>
       </div>
