@@ -1,9 +1,7 @@
 import type { FooterCategory } from "@/components/Footer";
 
 export const urlBase = new URL(
-  process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000",
+  "https://open-deeplearning.vercel.app",
 );
 
 export const domain = "https://open-deeplearning.vercel.app";
@@ -111,7 +109,7 @@ export const blogAuthors: Record<string, AuthorData> = {
   },
   taipei: {
     name: "Taipei101",
-    title: "Yeecord 網路工程師 兼 台北 101 網路股份有限公司創始人",
+    title: "Yeecord 網路工程師 兼 台北 101 網路股份有限公司創始��",
     url: "https://taipei101.xyz",
     image_url: "/blog/taipei.jpg",
   },
