@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://www.opendeeplearning.xyz/" target="_blank" >
-    <img src="public/opendeeplearning.png" alt="OpenDeepLearning" width="500"/>
+    <img src="public/opendeeplearning.png" alt="OpenDeepLearning" width="450"/>
   </a>
 </div>
 
