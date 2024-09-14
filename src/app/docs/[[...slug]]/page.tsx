@@ -17,7 +17,7 @@ export default async function Page({
   const Content = page.data.exports.default;
   const lastEdit = await getGithubLastEdit({
     path: `content/docs/${page.file.path}`,
-    owner: "OpenDeepLearningAI",
+    owner: "1msirius",
     repo: "OpenDeepLearning",
     token: process.env.GITHUB_TOKEN,
   });
@@ -31,7 +31,7 @@ export default async function Page({
       lastUpdate={lastEdit ?? undefined}
       editOnGithub={{
         sha: "master",
-        owner: "OpenDeepLearningAI",
+        owner: "1msirius",
         repo: "OpenDeepLearning",
         path: `content/docs/${page.file.path}`,
       }}
