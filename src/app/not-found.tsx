@@ -51,6 +51,22 @@ const NotFound = () => {
           active: "nested-url",
         },
         {
+          type: "menu",
+          text: "Company",
+          items: [
+            {
+              text: "About",
+              url: "/about",
+              active: "nested-url",
+            },
+            {
+              text: "Contact Us",
+              url: "mailto:maintainer.odl@gmail.com",
+              external: true,
+            },
+          ],
+        },
+        {
           type: "icon",
           url: "https://github.com/OpenDeepLearningAI/OpenDeepLearning",
           text: "GitHub",
