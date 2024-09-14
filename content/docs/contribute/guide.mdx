@@ -1,126 +1,190 @@
 ---
-title: "貢獻指南"
-description: 協助我們將文檔變得更完善!
+title: "Python"
+description: booleans and conditionals in Python
 ---
 
-import { Tabs, Tab } from "fumadocs-ui/components/tabs";
-
-## 新增頁面的方法
-
-我們使用 Fumadocs 來製作我們的文檔，您可以參考 [他們的指南](https://fumadocs.vercel.app/docs/ui/markdown) 來了解它的更多功能。
-
-<div className='steps [&>h3]:step'>
-  
-### 建立 MDX 檔案
-
-請填寫所有字段
-
-<Tabs items={["文檔", "部落格"]}>
-
-<Tab value="文檔">
-
-在 `/content/docs` 資料夾中建立檔案
-
-```mdx title="page.mdx"
----
-title: 你的標題
-description: 這是關於什麼的?
----
-
-內文...
-```
-
-</Tab>
-
-<Tab value="部落格">
-  
-在 `/content/blog` 資料夾中建立檔案
-
-```mdx title="page.mdx"
----
-title: 你的標題
-description: 這是關於什麼的?
-authors: [<作者編號>]
-date: 2023/1/1
-image: "/blog/banner.jpg"
-tags: ["文章標籤"]
----
-
-內文...
-```
-
-<h4>得到你自己的作者編號</h4>
-
-打開 `config.ts` 文件, 滾動到 `blogAuthors` 並添加您的個人信息
-
-- 避免文字太長
-- 不要放可疑的網址
-
-```ts
-export const blogAuthors: Record<string, AuthorData> = {
-  //...
-  henry: {
-    name: "你的名字",
-    title: "簡短的自我介紹",
-    url: "https://my-website.com",
-    image_url: "/blog/henry.jpg", //將圖像放入 /public/blog/henry.jpg
-  },
-};
-```
-
-之後你便可以用 `henry` 作為你的作者編號
-
-</Tab>
-
-</Tabs>
-
-### 創建內容
-
-我相信你已經學習了一些基本的 Markdown 語法
-
-#### 你需要注意這些事情
-
-- 適當的用詞
-- 禁止自我宣傳
-- 不應帶偏見或政治立場
-
-#### 改進你的文章
-
-- **漂亮的排版:**
-  使用標題而不是大量雜亂無章的文字
-- **數字和英文之間的空格:**
-  一切都遵循 [中文案排版指南](https://github.com/sparanoid/chinese-copywriting-guidelines)
-
-### 排序頁面
-
-您必須編輯 `meta.json` 以更改每個頁面的順序：
-
-```json
-{
-  "pages": ["index", "my-new-page"]
-}
-```
-
-### 對此有疑問？
-
-有支援需求可以聯絡我們的支援群組
-
-<div className="mt-4 flex flex-row gap-2.5">
-  <LinkButton
-    href="https://discord.gg/yeecord"
-    variant="primary"
-    children="加入服務器"
-  />
+<div class="badges-container">
+  # Booleans and Conditionals
+  <div class="badge">
+    <div class="colab">
+      [![Open In
+      Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/username/repository/blob/branch/path_to_notebook.ipynb)
+    </div>
+    <div class="discord">
+      [![Ask a
+      Question](https://img.shields.io/badge/Ask%20a%20Question-5765F2?logo=discord&logoColor=white)](https://discord.com/invite/bxnwugmNZg)
+    </div>
+  </div>
 </div>
 
-</div>
+In this module, we'll explore the foundational concepts of booleans and conditionals in Python programming.
 
-### 我們刪除了那些舊語法
+## Booleans
 
-請改用自定義組件
+Booleans represent logical values `True` or `False`. In the code cell below, `x` is set to a boolean with value `True`.
+
+```py
+x = True
+print(x)
+print(type(x))
+```
 
 ```
-::: warning 警告
-這不再受支持
-:::
+True
+<class 'bool'>
 ```
+
+Next, `y` is set to a boolean with value `False`.
+
+```py
+y = False
+print(y)
+print(type(y))
+```
+
+```
+False
+<class 'bool'>
+```
+
+Boolean values often result from comparison operations and logical operations.
+
+## Comparison Operations
+
+| Operator | Description                      |
+| -------- | -------------------------------- |
+| `a == b` | `a` equal to `b`                 |
+| `a != b` | `a` not equal to `b`             |
+| `a < b`  | `a` less than `b`                |
+| `a > b`  | `a` greater than `b`             |
+| `a <= b` | `a` less than or equal to `b`    |
+| `a >= b` | `a` greater than or equal to `b` |
+
+```py
+a = 10
+b = 5
+
+print(a == b)  # Output: False
+print(a != b)  # Output: True
+print(a < b)   # Output: False
+print(a > b)   # Output: True
+print(a <= b)  # Output: False
+print(a >= b)  # Output: True
+```
+
+## Logical Operations
+
+Booleans can be combined using logical operations: `and`, `or`, and `not`.
+
+Logical AND (`and`): Returns True if both operands are True, otherwise returns False.
+
+```py
+x = True
+y = False
+result = x and y
+print(result)
+```
+
+```
+True
+```
+
+Logical OR (`or`): Returns True if at least one operand is True, otherwise returns False.
+
+```py
+a = True
+b = False
+result = a or b
+print(result)
+```
+
+```
+True
+```
+
+Logical NOT (`not`): Returns True if the operand is False, and vice versa.
+
+```py
+z = False
+result = not z
+print(result)
+```
+
+```
+True
+```
+
+Example using all logical operations together
+
+```py
+x = True
+y = False
+
+# Using all logical operations together
+result_combined = ((x or y) and (not x)) or (not y)
+print("Combined:", result_combined)
+```
+
+```
+True
+```
+
+In the above example:
+
+- `((x or y) and (not x))` evaluates to `False` because `(x or y)` is `True` and `(not x)` is `False`.
+
+- `(not y)` evaluates to `True`.
+- The final result is `True` because `False or True` is `True`.
+
+## Conditionals
+
+Booleans are often used in conditional statements with `if`, `elif` (else if), and `else` keywords to control the flow of execution.
+
+Using `if` statement:
+
+```py
+score = 75
+
+if score >= 70:
+    print("Congratulations! You have passed the exam.")
+```
+
+```
+Congratulations! You have passed the exam.
+```
+
+Using `elif` (else if) statement:
+
+```py
+score = 65
+
+if score >= 70:
+    print("Congratulations! You have passed the exam.")
+elif score >= 60:
+    print("You have scored between 60 and 69. You can try again for a better score.")
+```
+
+```
+You have scored between 60 and 69. You can try again for a better score.
+```
+
+Using `else` statement:
+
+```py
+score = 55
+
+if score >= 70:
+    print("Congratulations! You have passed the exam.")
+elif score >= 60:
+    print("You have scored between 60 and 69. You can try again for a better score.")
+else:
+    print("Unfortunately, you have failed the exam. Better luck next time.")
+```
+
+```
+Unfortunately, you have failed the exam. Better luck next time.
+```
+
+## Exercise
+
+Solve the coding problem in a [Google Colab notebook](#)!
