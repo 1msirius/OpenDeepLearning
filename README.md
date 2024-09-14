@@ -4,6 +4,8 @@
   </a>
 </div>
 
+<a href="https://github.com/OpenDeepLearningAI/OpenDeepLearning/stargazers"><img src="https://img.shields.io/github/stars/OpenDeepLearningAI/OpenDeepLearning" alt="Stars Badge"/></a>
+
 ## Installation
 
 Ensure [pnpm](https://pnpm.io) is installed on your system. If not, follow the [installation instructions](https://pnpm.io/installation) on their website.
