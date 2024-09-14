@@ -1,10 +1,10 @@
 ---
-title: "Python"
-description: booleans and conditionals in Python
+title: "Working with Numbers"
+description: Working with Numbers in Python
 ---
 
 <div class="badges-container">
-  # Booleans and Conditionals
+  # Working with Numbers
   <div class="badge">
     <div class="colab">
       [![Open In
@@ -17,172 +17,166 @@ description: booleans and conditionals in Python
   </div>
 </div>
 
-In this module, we'll explore the foundational concepts of booleans and conditionals in Python programming.
+In this module, you will learn how to work with numbers in python.
 
-## Booleans
+## Integers
 
-Booleans represent logical values `True` or `False`. In the code cell below, `x` is set to a boolean with value `True`.
-
-```py
-x = True
-print(x)
-print(type(x))
-```
-
-```
-True
-<class 'bool'>
-```
-
-Next, `y` is set to a boolean with value `False`.
+Integers are numbers without any fractional part and can be positive (1, 2, 3, ...), negative (-1, -2, -3, ...), or zero (0).
 
 ```py
-y = False
-print(y)
-print(type(y))
+age = 25
+print(age)
 ```
 
 ```
-False
-<class 'bool'>
+25
 ```
 
-Boolean values often result from comparison operations and logical operations.
+You can use the `type()` function to determine the data type of a value or variable.
 
-## Comparison Operations
+```py
+age = 25
+print(type(age))
+```
 
-| Operator | Description                      |
-| -------- | -------------------------------- |
-| `a == b` | `a` equal to `b`                 |
-| `a != b` | `a` not equal to `b`             |
-| `a < b`  | `a` less than `b`                |
-| `a > b`  | `a` greater than `b`             |
-| `a <= b` | `a` less than or equal to `b`    |
-| `a >= b` | `a` greater than or equal to `b` |
+```py
+<class 'int'>
+```
+
+In the output above, `<class 'int'>` refers to the **int**eger data type
+
+## Float
+
+Floating-point numbers are numbers with a decimal point, representing fractional values.
+
+```py
+pi = 3.14159265
+print(pi)
+print(type(pi))
+```
+
+```
+3.14159265
+<class 'float'>
+```
+
+## Arithmetic Operations
+
+You can perform arithmetic operations on numbers using operators like `+`, `-`, `*`, `/`, `//` (integer division), `%` (modulus), and `**` (exponentiation).
 
 ```py
 a = 10
-b = 5
+b = 3
 
-print(a == b)  # Output: False
-print(a != b)  # Output: True
-print(a < b)   # Output: False
-print(a > b)   # Output: True
-print(a <= b)  # Output: False
-print(a >= b)  # Output: True
+print(a + b)
 ```
 
-## Logical Operations
+```sh
+13
+```
 
-Booleans can be combined using logical operations: `and`, `or`, and `not`.
+| Operator | Name           | Description                                         |
+| -------- | -------------- | --------------------------------------------------- |
+| `a + b`  | Addition       | Sum of `a` and `b`                                  |
+| `a - b`  | Subtraction    | Difference of `a` and `b`                           |
+| `a * b`  | Multiplication | Product of `a` and `b`                              |
+| `a / b`  | True division  | Quotient of `a` and `b`                             |
+| `a // b` | Floor division | Quotient of `a` and `b` , removing fractional parts |
+| `a % b`  | Modulus        | Integer remainder after division of `a` and `b`     |
+| `a ** b` | Exponentiation | `a` raised to the power of `b`                      |
+| `-a`     | Negation       | The negative of `a`                                 |
 
-Logical AND (`and`): Returns True if both operands are True, otherwise returns False.
+_Example:_
 
 ```py
-x = True
-y = False
-result = x and y
-print(result)
+a = 10
+b = 3
+
+print(a + b)  # Output: 13 (Addition)
+
+print(a - b)  # Output: 7 (Subtraction)
+
+print(a * b)  # Output: 30 (Multiplication)
+
+print(a / b)  # Output: 3.3333333333333335 (Division)
+
+print(a // b)  # Output: 3 (Integer division)
+
+print(a % b)  # Output: 1 (Modulus)
+
+print(a ** b)  # Output: 1000 (Exponentiation)
 ```
 
-```
-True
-```
+## Order of Operations
 
-Logical OR (`or`): Returns True if at least one operand is True, otherwise returns False.
+Python follows the standard order of operations (**PEMDAS**: **P**arentheses, **E**xponents, **M**ultiplication/**D**ivision, **A**ddition/**S**ubtraction) when evaluating arithmetic expressions.
 
 ```py
-a = True
-b = False
-result = a or b
-print(result)
+result = 9 - 6 + 3
+result = -5 + 7 * 2
 ```
 
-```
-True
+```sh
+6
+9
 ```
 
-Logical NOT (`not`): Returns True if the operand is False, and vice versa.
+You can use parentheses to override the default order of operations.
 
 ```py
-z = False
-result = not z
-print(result)
+result = (9 - 6) + 3
+result = -5 + (7 * 2)
 ```
 
-```
-True
+```sh
+6
+9
 ```
 
-Example using all logical operations together
+## Builtin functions
+
+Python also provides built-in functions to work with numbers, here are the most important functions:
+
+| Operator    | Name           | Description                                    |
+| ----------- | -------------- | ---------------------------------------------- |
+| `abs(x)`    | Absolute Value | Returns the absolute value of `x`              |
+| `round(x)`  | Rounding       | Rounds the value of `x` to the nearest integer |
+| `max(a, b)` | Maximum Value  | Returns the larger value between `a` and `b`   |
+| `min(a, b)` | Minimum Value  | Returns the smaller value between `a` and `b`  |
+| `type(x)`   | Type           | Returns the type of the object `x`             |
+
+**Example:**
 
 ```py
-x = True
-y = False
+print(abs(-5))  # Output: 5
 
-# Using all logical operations together
-result_combined = ((x or y) and (not x)) or (not y)
-print("Combined:", result_combined)
+print(round(3.14159))  # Output: 3
+
+print(max(10, 20))  # Output: 20
+
+print(min(10, 20))  # Output: 10
 ```
 
-```
-True
-```
-
-In the above example:
-
-- `((x or y) and (not x))` evaluates to `False` because `(x or y)` is `True` and `(not x)` is `False`.
-
-- `(not y)` evaluates to `True`.
-- The final result is `True` because `False or True` is `True`.
-
-## Conditionals
-
-Booleans are often used in conditional statements with `if`, `elif` (else if), and `else` keywords to control the flow of execution.
-
-Using `if` statement:
+You can also specify the number of decimal places for rounding using the `round()` function.
 
 ```py
-score = 75
-
-if score >= 70:
-    print("Congratulations! You have passed the exam.")
+print(round(3.14159, 2))
 ```
 
 ```
-Congratulations! You have passed the exam.
+3.14
 ```
 
-Using `elif` (else if) statement:
+You can also compare more than two numbers using the `max()` and `min()` functions.
 
 ```py
-score = 65
-
-if score >= 70:
-    print("Congratulations! You have passed the exam.")
-elif score >= 60:
-    print("You have scored between 60 and 69. You can try again for a better score.")
+print(max(10, 20, 5))
+print(min(10, 20, 5))
 ```
 
 ```
-You have scored between 60 and 69. You can try again for a better score.
-```
-
-Using `else` statement:
-
-```py
-score = 55
-
-if score >= 70:
-    print("Congratulations! You have passed the exam.")
-elif score >= 60:
-    print("You have scored between 60 and 69. You can try again for a better score.")
-else:
-    print("Unfortunately, you have failed the exam. Better luck next time.")
-```
-
-```
-Unfortunately, you have failed the exam. Better luck next time.
+20
+5
 ```
 
 ## Exercise

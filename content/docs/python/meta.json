@@ -1,8 +1,9 @@
 {
   "title": "Python for ML",
   "pages": [
-    "hello-world", 
-    "working-with-numbers", 
+    "hello-world",
+    "working-with-numbers",
+    "booleans-and-conditionals",
     "functions"
   ]
 }
