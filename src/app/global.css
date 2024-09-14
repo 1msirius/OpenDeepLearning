@@ -5,3 +5,26 @@
 .prose {
   --tw-prose-body: hsl(var(--muted-foreground));
 }
+
+/* Container for badges */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 640px) {
+  .badges-container {
+    float: right;
+    margin-top: -3rem; /* Adjust this value as needed */
+  }
+}
+
+/* Clear the float after the badges container */
+.badges-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
