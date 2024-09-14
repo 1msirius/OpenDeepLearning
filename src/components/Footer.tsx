@@ -1,75 +1,37 @@
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
+import { FaGithub, FaDiscord, FaYoutube, FaLinkedinIn, FaRedditAlien } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
-import { ExternalLinkIcon } from "lucide-react";
-
-export type FooterCategory = {
-  title: string;
-  items: FooterItem[];
-};
-
-type FooterItem = {
-  label: string;
-  href: string;
-  newWindow?: boolean;
-};
-
-export default function Footer({
-  categories,
-}: {
-  categories: FooterCategory[];
-}) {
+export default function Footer() {
   return (
-    <div className="container mt-auto border-t p-8 pb-20">
-      <div className="flex flex-col items-start justify-between gap-6 sm:flex-row">
-        <Info />
-        {categories.map((category, i) => (
-          <Category key={i} category={category} />
-        ))}
+    <footer className="mt-auto border-t bg-fd-card py-12 text-fd-secondary-foreground">
+      <div className="container flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
+          <div className="text-sm mb-4 sm:mb-0 text-center sm:text-left prose">
+            <span> © 2023-{new Date().getFullYear()} OpenDeepLearning </span>
+          </div>
+          <div className="flex justify-center sm:justify-end gap-5 text-[18px]">
+            <a href="https://x.com/ODL_AI" target="_blank" rel="noopener noreferrer">
+              <FaXTwitter className="hover:opacity-80" />
+            </a>
+            <a href="https://github.com/OpenDeepLearningAI" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="hover:opacity-80"  />
+            </a>
+            <a href="https://discord.com/invite/QgZHExcssR" target="_blank" rel="noopener noreferrer">
+              <FaDiscord className="hover:opacity-80" />
+            </a>
+            <a href="https://www.youtube.com/@OpenDeepLearningAI" target="_blank" rel="noopener noreferrer">
+              <FaYoutube className="hover:opacity-80" />
+            </a>
+            <a href="https://www.reddit.com/r/OpenDeepLearning/" target="_blank" rel="noopener noreferrer">
+              <FaRedditAlien className="hover:opacity-80" />
+            </a>
+            <a href="https://www.linkedin.com/company/opendeeplearning" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn className="hover:opacity-80" />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-}
-
-function Info() {
-  return (
-    <div className="hidden flex-col gap-2 sm:flex">
-      <div className="flex flex-row items-center gap-2">
-        <Image
-          alt="logo"
-          src="/img/logo_128x128.png"
-          width={40}
-          height={40}
-          className="rounded-full"
-        />
-        <p className="text-xl font-bold">Yeecord</p>
-      </div>
-      <p className="mt-2 text-xs text-muted-foreground">
-        YEE式機器龍 © 2019 ~ {new Date(Date.now()).getFullYear()}
-      </p>
-    </div>
-  );
-}
-
-function Category({ category }: { category: FooterCategory }) {
-  return (
-    <div className="flex flex-col">
-      <p className="mb-2 font-medium max-sm:cursor-pointer">{category.title}</p>
-      <div className="flex flex-col gap-1 text-sm">
-        {category.items.map((item, i) => (
-          <Link
-            key={i}
-            href={item.href}
-            className="py-1 text-muted-foreground transition-colors hover:text-accent-foreground"
-            target={item.newWindow === true ? "_blank" : "_self"}
-          >
-            {item.label}
-            {item.newWindow && (
-              <ExternalLinkIcon className="ml-1.5 inline h-3 w-3" />
-            )}
-          </Link>
-        ))}
-      </div>
-    </div>
+    </footer>
   );
 }
