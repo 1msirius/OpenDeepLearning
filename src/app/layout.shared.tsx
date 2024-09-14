@@ -9,16 +9,16 @@ export const layoutProps: HomeLayoutProps = {
         <div className="dark:hidden">
           <Image
             src="/logo-light.png"
-            width="22"
-            height="22"
+            width="23"
+            height="23"
             alt="OpenDeepLearning"
           />
         </div>
         <div className="hidden dark:flex">
           <Image
             src="/logo-dark.png"
-            width="22"
-            height="22"
+            width="23"
+            height="23"
             alt="OpenDeepLearning"
           />
         </div>
@@ -46,6 +46,22 @@ export const layoutProps: HomeLayoutProps = {
       icon: <LayoutListIcon />,
       text: "Blog",
       active: "nested-url",
+    },
+    {
+      type: "menu",
+      text: "Company",
+      items: [
+        {
+          text: "About",
+          url: "/about",
+          active: "nested-url",
+        },
+        {
+          text: "Contact Us",
+          url: "mailto:maintainer.odl@gmail.com",
+          external: true,
+        },
+      ],
     },
     {
       type: "icon",
