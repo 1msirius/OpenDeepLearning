@@ -1,0 +1,105 @@
+---
+title: "Setup"
+description: Setting up your Python environment
+icon: Settings2
+---
+
+## Introduction
+
+Before diving into Python for Machine Learning, let’s set up the tools you’ll use to write and execute your code. There are two main environments for working with Python: **Shell** and **Notebook**. Let’s explore both.
+
+<Callout>
+  Install [Python](https://www.python.org/downloads/) and
+  [IPython](https://ipython.org/install.html) from the official docs if they're
+  not already installed on your system.
+</Callout>
+
+## Shell
+
+The Shell is the simplest way to run Python commands interactively, executing code line by line directly in your terminal.
+
+### Python
+
+To start the Python Shell, open your terminal and type `python`:
+
+```sh title="Python Shell"
+(base) ➜  ~ python   # [!code highlight]
+Python 3.11.4 (main, Jul  5 2023, 08:54:11) [Clang 14.0.6 ] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print("Python shell!")
+Python shell!
+>>> 4 + 9
+13
+>>>
+```
+
+### Ipython
+
+[IPython](https://ipython.org/) is an enhanced version of the Python Shell with additional features like syntax highlighting, auto-completion, and better debugging tools.
+
+To start IPython, type `ipython` in your terminal:
+
+```sh title="IPython Shell"
+(base) ➜  ~ ipython  # [!code highlight]
+Python 3.11.4 (main, Jul  5 2023, 08:54:11) [Clang 14.0.6 ]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.12.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: print("IPython Shell")
+IPython Shell
+
+In [2]: 3 + 39
+Out[2]: 42
+
+In [3]:
+```
+
+The Shell is excellent for quick experiments but isn’t ideal for larger, more complex projects. That’s where **Notebooks** come in.
+
+## Notebooks
+
+A notebook is a web-based interactive environment built on top of [IPython](#ipython). As we’ve seen, working in the shell can be tricky, but notebooks make it easier by combining code, visualizations, and explanations in one place.
+
+### Jupyter Notebook
+
+[Jupyter Notebook](https://jupyter.org/) is a local web-based notebook, ideal for development, collaboration, and sharing.
+
+Install it with the command `pip install notebook`, then launch it using `jupyter notebook`.
+
+This will launch a local web server, display a log of the server’s activity in the terminal, and automatically open the URL [localhost:8888](http://localhost:8888) in your browser, taking you to the Notebook interface.
+
+![Jupyter Notebook](/courses/python/setup/notebook.gif)
+
+There is also an enhanced version of Jupyter Notebook called **JupyterLab**, which provides a more flexible and powerful environment, allowing you to work with multiple notebooks, terminals, and text editors in a single, integrated workspace.
+
+Install it with the command `pip install jupyterlab`, then launch it using `jupyter lab`.
+
+![JupyterLab](/courses/python/setup/jupyterlab.gif)
+
+Learn more about using JupyterLab in this [introduction](https://youtu.be/A5YyoCKxEOU?si=vQJXKYTakXIe-DJC) by the Jupyter team.
+
+### Google Colab
+
+[Google Colab](https://colab.research.google.com/) is a cloud-based notebook that runs directly in your browser, offering pre-installed machine learning libraries and free access to powerful hardware like GPUs and TPUs for smaller workloads.
+
+Due to its ease of use, flexibility, and access to more compute, many people now prefer using Colab over Jupyter.
+
+![Google Colab](/courses/python/setup/colab.gif)
+
+Learn more about using Colab in this [introduction](https://colab.research.google.com/notebooks/intro.ipynb) by the Colab team.
+
+### Kaggle Notebook
+
+[Kaggle Notebooks](https://www.kaggle.com/code) are similar to Colab but are fully integrated with Kaggle’s datasets and competitions, making it easy to access data and participate in challenges directly from the notebook.
+
+![Kaggle Notebook](/courses/python/setup/kaggle-notebook.gif)
+
+Learn more about using Kaggle Notebooks in this [introduction](https://www.kaggle.com/docs/notebooks) by the Kaggle team.
+
+## Which one to use?
+
+If you’re unsure which environment to choose, [Google Colab](#google-colab) is an best option. It’s user-friendly, provides free access to powerful hardware and comes with pre-installed machine learning libraries.
+
+For this course, we’ll be using Colab as our primary environment.
+
+You’re now all set up and ready to go!

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 220deg 91% 54%;
+  /* --primary: 250 80% 54%; */
+}
+
+.dark {
+  --primary: 217deg 92% 76%;
+  /* --primary: 250 100% 80%; */
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Pytorch",
+  "description": "Learn Pytorch",
+  "icon": "Book",
+  "root": true,
+  "pages": [
+    "index",
+    "setup",
+    "---Useful links---",
+    "[Book][Community](https://discord.com/)",
+    "[Book][Forum](https://www.discourse.org/)",
+    "[Book][YouTube](https://www.youtube.com/)"
+  ]
+}

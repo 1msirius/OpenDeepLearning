@@ -1,0 +1,20 @@
+{
+  "title": "Python DS",
+  "description": "Python Data Science",
+  "root": true,
+  "icon": "Building2",
+  "pages": [
+    "---Welcome---",
+    "index",
+    "setup",
+    "---Modules---",
+    "python",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "---Useful links---",
+    "[Book][Community](https://discord.com/)",
+    "[Book][Forum](https://www.discourse.org/)",
+    "[Book][YouTube](https://www.youtube.com/)"
+  ]
+}
