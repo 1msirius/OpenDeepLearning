@@ -36,7 +36,7 @@ export default async function Page(props: {
       editOnGithub={{
         sha: "main",
         owner: "1msirius",
-        repo: "odlai",
+        repo: "OpenDeepLearning",
         path: `content/docs/${page.file.path}`,
       }}
     >
