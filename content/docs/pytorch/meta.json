@@ -1,14 +1,15 @@
 {
   "title": "Pytorch",
   "description": "Learn Pytorch",
-  "icon": "Book",
+  "icon": "SiPytorch",
   "root": true,
   "pages": [
     "index",
     "setup",
-    "---Useful links---",
-    "[Book][Community](https://discord.com/)",
-    "[Book][Forum](https://www.discourse.org/)",
-    "[Book][YouTube](https://www.youtube.com/)"
+    "---Community---",
+    "[FaDiscord][Discord](https://discord.com/invite/bxnwugmNZg)",
+    "[FaDiscourse][Forum](https://www.discourse.org/)",
+    "[FaGithub][GitHub](https://github.com/OpenDeepLearningAI/)",
+    "[FaYoutube][YouTube](https://www.youtube.com/@OpenDeepLearningAI)"
   ]
 }

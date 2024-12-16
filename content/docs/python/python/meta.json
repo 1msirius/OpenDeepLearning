@@ -1,7 +1,7 @@
 {
   "title": "Python",
   "description": "Python for Data Dcience",
-  "icon": "Book",
+  "icon": "SiPython",
   "pages": [
     "hello-python",
     "data-types",
