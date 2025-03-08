@@ -14,6 +14,9 @@ importers:
       '@theguild/remark-mermaid':
         specifier: ^0.1.3
         version: 0.1.3(react@19.0.0)
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
       fumadocs-core:
         specifier: 14.6.1
         version: 14.6.1(@types/react@19.0.1)(next@15.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
